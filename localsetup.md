@@ -47,7 +47,7 @@ gitクローンしたフォルダ内(例: `ホームディレクトリ/git/clubs
 ## 5. データベースバックアップのインポート
 
 1. ターミナルを開きます。
-1. `mysql -h db -u tmc_clubsupport -p --skip-ssl < tmc_clubsup-YYYY-mm-DD_番号.sql`
+1. `mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < tmc_clubsup-YYYY-mm-DD_番号.sql`
 1. パスワードを入力
 
 **データベースのコンテナを削除**しない限り、データは保持されます。二回目からは不要です。
