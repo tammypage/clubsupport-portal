@@ -47,8 +47,8 @@ VSCodeとコンテナの連携設定を記述します。
     `docker volume rm clubsupport_devcontainer_db-data`
 1. データインポート
     1. テーブルのみ登録
-        `mysql -h db -u tmc_clubsupport -p --skip-ssl < db/schema_full.sql`
+        `mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < db/schema_full.sql`
     1. データ含めて復元
-        `mysql -h db -u tmc_clubsupport -p --skip-ssl < tmc_clubsup-YYYY-mm-DD_番号.sql`
+        `mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < tmc_clubsup-YYYY-mm-DD_番号.sql`
        
 ※ コンテナ名やボリューム名は適宜、`docker ps -a`や`docker volume ls`で確認して下さい。
