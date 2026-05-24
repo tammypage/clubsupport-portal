@@ -1,8 +1,26 @@
-## ClubSupport 公開ポータル
+# ClubSupport 公開ポータル
 
-このリポジトリでは、ClubSupport プロジェクトに関する公開情報を掲載しています。
+ClubSupport プロジェクトに関する公開情報を掲載しています。
 
-- [デバッグ環境構築手順（権限保持者向け）](./localsetup.md)
-- [リリース予定表](./roadmap.md)
-- [お問い合わせ](https://docs.google.com/forms/d/e/1FAIpQLScPBnK7t0BZn0Vr5__1yu9x5DX_V2jKf-BpEF1au5p3H0hi4w/viewform)
-- [Googleグループ](https://groups.google.com/g/tmc_club_support/about)
+### 📢 最新のお知らせ
+* **【重要】[システム変更・アップデートのお知らせ](./news.md)**  
+<small>（2026.05.24更新）※会員の皆様に関わる重要な変更や、運営からのお願いを掲載しています。</small>
+
+---
+
+### 💡 クラブサポートシステムについて
+* 🎯 **[クラブサポートシステムの運用方針](policy.md)**  
+<small>本システムがどのような方向性を目指して開発・運営されているかという「開発ポリシー」を掲載しています。</small>
+* 📅 **[リリース予定表](./roadmap.md)**  
+<small>今後の機能追加や改善のスケジュール（ロードマップ）です。</small>
+
+### ✉️ お問い合わせ・コミュニティ
+* 📝 **[お問い合わせ（Googleフォーム）](https://docs.google.com/forms/d/e/1FAIpQLScPBnK7t0BZn0Vr5__1yu9x5DX_V2jKf-BpEF1au5p3H0hi4w/viewform)**  
+<small>システムに関する一般的なご質問や不具合のご報告は、こちらのフォームからお気軽にお寄せください。</small>
+* 👥 **[Googleグループ（クラブサポートメンバー）](https://groups.google.com/g/tmc_club_support/about)**  
+<small>運営・開発を支えるサポートメンバーのグループです。メンバーへの加入希望や、メーリングリストでのご連絡はこちらから。</small>
+
+---
+
+### 🛠️ 開発者向け情報
+* 💻 **[デバッグ環境構築手順（権限保持者向け）](./localsetup.md)**
