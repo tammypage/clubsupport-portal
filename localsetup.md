@@ -49,6 +49,14 @@ gitクローンしたフォルダ内(例: `ホームディレクトリ/git/clubs
 1. ターミナルを開きます。
 1. `mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < tmc_clubsup-YYYY-mm-DD_番号.sql`
 1. パスワードを入力
+1. 移行ツールを流します。
+```sh
+/var/www/html/migrate_sqlite_to_mariadb.sh
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < /var/www/html/db/issue_39/add_prj_master.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < /var/www/html/db/issue_16/create_table_club.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < /var/www/html/db/issue_45/merge_club_clubinfo.sql
+bash /var/www/html/db/issue_6/migrate_issue6.sh
+```
 
 **データベースのコンテナを削除**しない限り、データは保持されます。二回目からは不要です。
 
