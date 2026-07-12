@@ -31,7 +31,7 @@ VSCodeとコンテナの連携設定を記述します。
 
 ## DBバックアップ
 
-`mysqldump --skip-ssl -h db -u tmc_clubsupport -p tmc_clubsupport > "tmc_clubsup-$(date +%Y-%m-%d_%H).sql"`
+`mysqldump --skip-ssl -h db -u tmc_clubsupport -p tmc_clubsupport > "tmc_clubsup-$(date +%Y-%m-%d_%H%M%S).sql"`
 
 ## DDL作成
 
