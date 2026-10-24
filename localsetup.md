@@ -51,11 +51,13 @@ gitクローンしたフォルダ内(例: `ホームディレクトリ/git/clubs
 1. パスワードを入力
 1. 移行ツールを流します。
 ```sh
-bash /var/www/html/db/issue_39/migrate_sqlite_to_mariadb.sh
-bash /var/www/html/db/issue_16/migrate_club.sh
-bash /var/www/html/db/issue_6/migrate_path.sh
-mysql -h db -u tmc_clubsupport -p --skip-ssl --default-character-set=utf8mb4 tmc_clubsupport < /var/www/html/db/issue_46/add_basic_auth.sql
-bash /var/www/html/db/issue_61/agetnda_import.sh
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_82/drop_unused_tables.sql
+bash /var/www/html/db/issue_81/migrate_issue81.sh
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_82/drop_club_name.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/add_clubtitlesuffix.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/drop_clubtitleMob.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/fill_club_best_manual.sql
+mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/strip_clubtitle_html.sql
 ```
 
 **データベースのコンテナを削除**しない限り、データは保持されます。二回目からは不要です。
