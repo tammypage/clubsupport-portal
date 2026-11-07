@@ -47,18 +47,8 @@ gitクローンしたフォルダ内(例: `ホームディレクトリ/git/clubs
 ## 5. データベースバックアップのインポート
 
 1. ターミナルを開きます。
-1. `mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < tmc_clubsup-YYYY-mm-DD_番号.sql`
+1. `mysql --default-character-set=utf8mb4 -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport < tmc_clubsup-YYYY-mm-DD_番号.sql`
 1. パスワードを入力
-1. 移行ツールを流します。
-```sh
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_82/drop_unused_tables.sql
-bash /var/www/html/db/issue_81/migrate_issue81.sh
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_82/drop_club_name.sql
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/add_clubtitlesuffix.sql
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/drop_clubtitleMob.sql
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/fill_club_best_manual.sql
-mysql -h db -u tmc_clubsupport -p --skip-ssl tmc_clubsupport  < db/issue_73/strip_clubtitle_html.sql
-```
 
 **データベースのコンテナを削除**しない限り、データは保持されます。二回目からは不要です。
 
